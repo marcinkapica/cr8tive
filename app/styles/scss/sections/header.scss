@@ -1,0 +1,6 @@
+.header {
+  @extend %sectionBackground;
+  @include sectionBackgroundImage('background-header.jpg');
+  text-align: right;
+  padding: 0 $sectionPaddingSide;
+}

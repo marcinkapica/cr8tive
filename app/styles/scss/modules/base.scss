@@ -1,3 +1,26 @@
 * {
   box-sizing: border-box;
 }
+
+// variables
+$sectionPaddingSide: 31.1rem;
+
+// mixins, placeholders
+
+%clearfix {
+  &::after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+%sectionBackground {
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin sectionBackgroundImage($backgroundImage) {
+  background-image:url("../images/#{$backgroundImage}");
+}

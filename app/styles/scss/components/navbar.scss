@@ -1,0 +1,24 @@
+.navbar {
+  text-align: right;
+  @extend %clearfix;
+}
+
+.logo {
+float:left;
+}
+
+.search, .hamburger {
+  display:inline-block;
+}
+
+
+.menu {
+  display:inline-block;
+  list-style: none;
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+      text-decoration: none;
+  }
+}
