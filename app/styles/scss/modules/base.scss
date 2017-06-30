@@ -3,7 +3,9 @@
 }
 
 // variables
-$sectionPaddingSide: 31.1rem;
+$sectionPaddingSide-smallScreen: 5rem;
+$sectionPaddingSide-bigScreen: 31.1rem;
+
 
 // mixins, placeholders
 
@@ -19,8 +21,4 @@ $sectionPaddingSide: 31.1rem;
   background-size:cover;
   background-repeat:no-repeat;
   background-position: 50% 50%;
-}
-
-@mixin sectionBackgroundImage($backgroundImage) {
-  background-image:url("../images/#{$backgroundImage}");
 }

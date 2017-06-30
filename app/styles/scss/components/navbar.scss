@@ -1,24 +1,48 @@
 .navbar {
-  text-align: right;
   @extend %clearfix;
+  position:fixed;
+  width:100%;
+  padding:0 6rem;
+  // margin:1.1875rem 6rem 0;
+  // margin-right:6rem;
+  &__hamburger, &__search, &__logo {
+    display:inline-block;
+    z-index:999;
+    position: relative;
+  }
+  &__logo {
+    float:left;
+    width:11.125rem;
+    height:3.75rem;
+    margin:1.1875rem 0;
+  }
+  &__toggle-icon {
+    display: none!important; //overriding Font Awesome default display property
+    &--visible {
+      cursor:pointer;
+      display: inline-block!important;
+    }
+  }
 }
-
-.logo {
-float:left;
-}
-
-.search, .hamburger {
-  display:inline-block;
-}
-
 
 .menu {
-  display:inline-block;
+  position:fixed;
+  visibility:hidden;
+  left:0;
+  width:100%;
+  height:100%;
+  padding-left:0;
+  padding-top:7rem;
+  margin-top:-1.1875rem;
   list-style: none;
   &__item {
-    display: inline-block;
+    display: block;
+    padding: 1rem 0;
   }
   &__link {
-      text-decoration: none;
+      padding: 1rem 0;
+  }
+  &--visible {
+    visibility:visible;
   }
 }

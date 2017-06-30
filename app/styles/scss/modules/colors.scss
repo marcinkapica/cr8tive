@@ -1,0 +1,34 @@
+// Navbar
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.5s;
+  &__hamburger, &__search {
+    background: none;
+    outline: none;
+    color: #fff;
+    border: 0;
+  }
+  &--scrolling {
+    background-color: rgba(0,39,255,0.7);
+    transition: all 0.5s;
+  }
+}
+
+.menu {
+  background-color: #000;
+  opacity: 0;
+  transition: all 0.25s;
+  &--visible {
+    opacity: 0.95;
+  }
+  &__link {
+    color: #fff;
+  }
+}
+
+
+
+// Header
+.header {
+    color: #fff;
+}
