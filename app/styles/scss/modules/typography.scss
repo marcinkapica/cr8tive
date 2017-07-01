@@ -1,6 +1,13 @@
 html {
   font-size:12px;
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
   @media screen and (min-width:$tablet) {
+    font-size:16px;
+  }
+  @media screen and (min-width:$notebook) {
+    font-size:12px;
+  }
+  @media screen and (min-width:$fhd) {
     font-size:16px;
   }
 }
@@ -16,6 +23,7 @@ html {
   text-align: center;
   line-height: normal;
   &__link {
+    font-size: 1.25rem;
     text-decoration: none;
   }
 }
