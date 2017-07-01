@@ -2,10 +2,14 @@
 .navbar {
   background-color: transparent;
   transition: background-color 0.5s;
-  &__hamburger, &__search {
+  &__toggle, &__search {
     background: none;
     outline: none;
     color: #fff;
+    border: 0;
+  }
+  &__search-bar {
+    outline: none;
     border: 0;
   }
   &--scrolling {
@@ -17,9 +21,9 @@
 .menu {
   background-color: #000;
   opacity: 0;
-  transition: all 0.25s;
   &--visible {
     opacity: 0.95;
+    transition: all 0.25s;
   }
   &__link {
     color: #fff;

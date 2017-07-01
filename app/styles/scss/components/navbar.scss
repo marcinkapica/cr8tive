@@ -3,9 +3,7 @@
   position:fixed;
   width:100%;
   padding:0 6rem;
-  // margin:1.1875rem 6rem 0;
-  // margin-right:6rem;
-  &__hamburger, &__search, &__logo {
+  &__toggle, &__search, &__logo {
     display:inline-block;
     z-index:999;
     position: relative;
@@ -15,6 +13,24 @@
     width:11.125rem;
     height:3.75rem;
     margin:1.1875rem 0;
+  }
+
+  &__search-bar {
+    width:0;
+    transition: width 0.3s, padding 0.3s;
+    &--open {
+      padding:0 0.5rem;
+      width:10rem;
+    }
+  }
+  .transReset {
+    transition: intial;
+  }
+
+  &__toggle {
+    @media screen and (min-width:$notebook) {
+      display:none;
+    }
   }
   &__toggle-icon {
     display: none!important; //overriding Font Awesome default display property
@@ -30,14 +46,26 @@
   visibility:hidden;
   left:0;
   width:100%;
-  height:100%;
+  height:120%;
   padding-left:0;
   padding-top:7rem;
-  margin-top:-1.1875rem;
+  margin-top:0;
   list-style: none;
+  @media screen and (min-width:$notebook) {
+    display: inline-block;
+    position: relative;
+    width:auto;
+    height: auto;
+    padding-top:0;
+    opacity: 1;
+    visibility: visible;
+  }
   &__item {
     display: block;
     padding: 1rem 0;
+    @media screen and (min-width:$notebook) {
+      display:inline-block;
+    }
   }
   &__link {
       padding: 1rem 0;

@@ -1,22 +1,58 @@
 $(document).ready(function() {
-  triggerMenu();
+    triggerMenu();
+    triggerSearch();
 });
 
 $(window).scroll(function() {
+    var navbar = $(".js-navbar");
     var scroll = $(window).scrollTop();
 
     if (scroll > 0 ) {
-        $(".js-navbar").addClass("navbar--scrolling");
+        navbar.addClass("navbar--scrolling");
     } else {
-        $(".js-navbar").removeClass("navbar--scrolling");
+        navbar.removeClass("navbar--scrolling");
     }
 });
 
+function triggerMenu(){
+    var toggleNav = $(".js-toggleNav");
+    var menu = $(".js-menu");
+    var hamburgerIcon = $(".js-hamburger-icon");
+    var closeIcon = $(".js-close-icon");
 
-var triggerMenu = function(){
-  $('.js-toggleNav').on('click',function(){
-    $(".js-menu").toggleClass("menu--visible", 250);
-    $(".js-hamburger-icon").toggleClass("navbar__toggle-icon--visible", 250);
-    $(".js-close-icon").toggleClass("navbar__toggle-icon--visible", 250);
+    toggleNav.click(function(){
+        menu.toggleClass("menu--visible");
+        hamburgerIcon.toggleClass("navbar__toggle-icon--visible");
+        closeIcon.toggleClass("navbar__toggle-icon--visible");
+        event.stopPropagation();
   });
+
+    $(document).click(function(){
+        menu.removeClass("menu--visible");
+        closeIcon.removeClass("navbar__toggle-icon--visible");
+        hamburgerIcon.addClass("navbar__toggle-icon--visible");
+    });
+
+    $(window).resize(function(){
+        menu.removeClass("menu--visible");
+        closeIcon.removeClass("navbar__toggle-icon--visible");
+        hamburgerIcon.addClass("navbar__toggle-icon--visible");
+    });
+}
+
+function triggerSearch() {
+    var toggleSearch = $(".js-toggleSearch");
+    var searchBar = $(".js-searchBar");
+
+    toggleSearch.on("click",function(){
+        searchBar.toggleClass("navbar__search-bar--open").focus();
+        event.stopPropagation();
+        searchBar.on("click",function(){
+            event.stopPropagation();
+        });
+    });
+
+    $(document).on("click", function(){
+        searchBar.removeClass("navbar__search-bar--open").focusout();
+    });
 }

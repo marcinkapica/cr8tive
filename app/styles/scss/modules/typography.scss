@@ -8,6 +8,9 @@ html {
 .navbar {
   text-align: right;
   line-height: 6.125rem;
+  &__search-bar {
+    line-height: 1.5rem;
+  }
 }
 .menu {
   text-align: center;
