@@ -9,3 +9,4 @@ package.json
 /app/styles/*.css
 /app/styles/*.css.map
 !/app/styles/vendor/
+.idea/*
