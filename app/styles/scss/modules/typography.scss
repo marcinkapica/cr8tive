@@ -1,3 +1,7 @@
+$regular: 400;
+$bold: 700;
+$extraBold: 800;
+
 html {
   font-size:12px;
   font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
@@ -12,6 +16,18 @@ html {
   }
 }
 
+.button, .box__heading, .form__heading {
+  font-weight: $bold;
+}
+
+.menu, .header__heading, .section-skills__heading, .heading, .card__name, .quotation__author {
+  font-weight: $extraBold;
+}
+
+.text--big, .quotation__text {
+  font-style: italic;
+}
+
 .navbar {
   text-align: right;
   line-height: 6.125rem;
@@ -24,6 +40,7 @@ html {
   line-height: normal;
   &__link {
     font-size: 1.25rem;
+    text-transform:uppercase;
     text-decoration: none;
   }
 }
