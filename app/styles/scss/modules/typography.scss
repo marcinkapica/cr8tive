@@ -24,8 +24,12 @@ html {
   font-weight: $extraBold;
 }
 
-.text--big, .quotation__text {
+.text-big, .quotation__text {
   font-style: italic;
+}
+
+.text {
+  font-size:1.25rem;
 }
 
 .navbar {
@@ -34,8 +38,12 @@ html {
   &__search-bar {
     line-height: 1.5rem;
   }
+  &__search-icon, &__toggle-icon {
+    font-size: 1.875rem;
+  }
 }
 .menu {
+  font-size:1.25rem;
   text-align: center;
   line-height: normal;
   &__link {
@@ -43,4 +51,78 @@ html {
     text-transform:uppercase;
     text-decoration: none;
   }
+}
+
+.header__heading {
+  font-size: 4.375rem;
+  &--emphasis {
+    font-size: 9rem;
+  }
+}
+
+.section-skills {
+  &__heading {
+    font-size: 2.6875rem;
+    &--emphasis {
+      font-size: 4.0635rem;
+    }
+  }
+  &__icon {
+    font-size: 2.5rem;
+  }
+  &__box-heading {
+    font-size: 1.5625rem;
+  }
+  &__text {
+    font-size: 0.9375rem;
+  }
+}
+
+.text-big {
+  font-size: 1.8125rem;
+}
+
+.heading {
+  font-size: 2.6875rem;
+}
+
+.button {
+  font-size:1.375rem;
+}
+
+.card {
+  &__name {
+    font-size:1.8125rem;
+  }
+  &__profession {
+    font-size:1.375rem;
+  }
+}
+
+.quotation {
+  &__text, &__profession {
+    font-size: 1.5625rem;
+  }
+  &__author {
+    font-size: 1.8125rem;
+  }
+}
+
+.form {
+  &__heading {
+    font-size: 1.8125rem;
+  }
+  &__field {
+    font-size: 1.0625rem;
+  }
+}
+
+.footer {
+  &__icon-container {
+    font-size: 1.875rem;
+  }
+}
+
+.tilde {
+  font-size: 4.6875rem;
 }
