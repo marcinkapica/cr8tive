@@ -6,8 +6,6 @@ dist/
 gulpfile.babel.js
 package.json
 .babelrc
-/app/styles/*.css
-/app/styles/*.css.map
 !/app/styles/vendor/
 
 
