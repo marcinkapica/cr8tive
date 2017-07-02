@@ -1,5 +1,30 @@
 .header {
   @extend %sectionBackground;
+  @extend %clearfix;
   background-image: url("../images/background-header.jpg");
-  padding: 10rem $padSide-small 0;
+  padding: 10rem $padSide-phone 0;
+  @media screen and (min-width:$desktop) {
+    padding: 10rem 10% 0;
+  }
+  @media screen and (min-width:$fhd) {
+    padding: 10rem 15rem 0;
+  }
+  &__image {
+    display:none;
+    width:44rem;
+    max-width:50%;
+    position: relative;
+    left: 6rem;
+    top:2rem;
+    transition: all 1s;
+    margin-bottom: -4rem;
+    float:left;
+    &:hover {
+      transform: scale(1.2) rotate(10deg) translateX(-50%);
+      left:50%;
+    }
+    @media screen and (min-width:$notebook) {
+      display:block;
+    }
+  }
 }

@@ -1,0 +1,13 @@
+.button {
+  display: inline-block;
+  border-width: 3px;
+  border-style:solid;
+  padding: 0.7rem 1.4rem;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(1);
+  }
+}

@@ -12,31 +12,34 @@
         <link rel="stylesheet" href="styles/vendor/owl.carousel.min.css">
         <link rel="stylesheet" href="styles/main.css">
     </head>
-        <body>
-
-        <nav class="navbar js-navbar">
-            <img class="navbar__logo" src="images\Logo.png" alt="Cr8tive company logo">
+    <body>
+        <nav class="navbar js-navbar color-primary">
+            <div class="navbar__logo-container">
+                <img class="navbar__logo" src="images\Logo.png" alt="Cr8tive company logo">
+            </div>
             <ul class="menu js-menu">
-                <li class="menu__item"><a class="menu__link" href="http://www.onet.pl">home</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">about</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">services</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">works</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">blog</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">contact</a></li>
+                <li class="menu__item"><a class="menu__link" href="http://www.onet.pl">home</a></li><!--
+                --><li class="menu__item"><a class="menu__link" href="#">about</a></li><!--
+                --><li class="menu__item"><a class="menu__link" href="#">services</a></li><!--
+                --><li class="menu__item"><a class="menu__link" href="#">works</a></li><!--
+                --><li class="menu__item"><a class="menu__link" href="#">blog</a></li><!--
+                --><li class="menu__item"><a class="menu__link" href="#">contact</a></li>
             </ul>
-            <form class="navbar__search">
+            <form class="navbar__search-form">
                 <input class="navbar__search-bar js-searchBar" type="text" name="search" placeholder="search...">
-                <i class="fa fa-search navbar__search-icon js-toggleSearch" aria-hidden="true"></i>
             </form>
+            <i class="fa fa-search navbar__search-icon js-toggleSearch" aria-hidden="true"></i>
             <button class="navbar__toggle js-toggleNav">
                 <i class="fa fa-bars navbar__toggle-icon js-hamburger-icon navbar__toggle-icon--visible" aria-hidden="true"></i>
                 <i class="fa fa-times navbar__toggle-icon js-close-icon" aria-hidden="true"></i>
             </button>
         </nav>
-        <header class="header">
+
+        <header class="header color-primary">
+            <img class="header__image" src="images/iron-man2.png">
             <h1 class="header__heading">We&nbsp;are&nbsp;an<br><span class="header__heading--emphasis">Creative</span><br>Digital&nbsp;Agency</h1>
             <p class="header__text text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br>sed diam nonummy nibh euismod tincidunt ut laoreet<br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-            <a class="button" href="#">click here</a>
+            <a class="button color-primary" href="#">click here</a>
         </header>
         <section class="section section-skills">
             <div class="section-skills__heading-container">
@@ -82,7 +85,7 @@
                 <img class="section-portfolio__image section-portfolio__image--medium" src="images\machine.jpg">
             </div>
 
-            <a class="button" href="#">click here</a>
+            <a class="button color-primary" href="#">click here</a>
         </section>
 
         <section class="section section-team">
@@ -153,11 +156,11 @@
             <div class="form">
                 <h3 class="form__heading">Send us a message</h3>
                 <form method="post">
-                    <input type="text" name="name" value="Name" class="form__field">
-                    <input type="email" name="email" value="Email" class="form__field">
-                    <input type="tel" name="phone" value="Phone" class="form__field">
-                    <textarea name="message" value="Message" class="form__field"></textarea>
-                    <button type="submit" class="button">submit</button>
+                    <input type="text" name="name" placeholder="Name" class="form__field">
+                    <input type="email" name="email" placeholder="Email" class="form__field">
+                    <input type="tel" name="phone" placeholder="Phone" class="form__field">
+                    <textarea name="message" placeholder="Message" class="form__field"></textarea>
+                    <button type="submit" class="button color-primary">submit</button>
                 </form>
             </div>
             <div class="footer__icon-container">
@@ -168,8 +171,8 @@
             </div>
             <address class="address">
                 <p class="text">Address : Door No. 129, unde omnis iste, New York, USA</p>
-                <p class="text">Phone : <a href="tel:+0001234567">+(000) 123 4567</a>,<a href="tel:+1234567890">(123) 456 7890</a></p>
-                <p class="text">Email : <a href="mailto:free@psdfreebies.com">free@psdfreebies.com</a>, <a href="http://www.psdfreebies.com" target="_blank">www.psdfreebies.com</a></p>
+                <p class="text">Phone : <a class="address__link" href="tel:+0001234567">+(000) 123 4567</a>,<a class="address__link" href="tel:+1234567890">(123) 456 7890</a></p>
+                <p class="text">Email : <a class="address__link" href="mailto:free@psdfreebies.com">free@psdfreebies.com</a>, <a class="address__link" href="http://www.psdfreebies.com" target="_blank">www.psdfreebies.com</a></p>
             </address>
             <small class="footer__copyright text">Copyright 2018 PSDfreebies.com - All Rights Reserved</small>
         </footer>

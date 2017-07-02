@@ -1,3 +1,27 @@
+$color-primary:#fff;
+$color-secondary:#000;
+$color-emphasis: #eeb501;
+
+.color-primary {
+  color:$color-primary;
+}
+
+.color-secondary {
+  color:$color-secondary;
+}
+
+.color-emphasis{
+  color:$color-emphasis;
+}
+//button
+.button {
+  &:hover {
+    color:$color-emphasis;
+  }
+}
+
+
+
 // Navbar
 .navbar {
   background-color: transparent;
@@ -8,34 +32,48 @@
     color: #fff;
     border: 0;
   }
-  &__search-icon{
-    -webkit-tap-highlight-color:transparent;
-  }
   &__search-bar {
     outline: none;
     border: 0;
   }
   &--scrolling {
     background-color: rgba(0,39,255,0.7);
-    transition: all 0.5s;
   }
 }
 
 .menu {
   background-color: #000;
   opacity: 0;
+  @media screen and (min-width:$notebook) {
+    background-color:transparent;
+  }
   &--visible {
     opacity: 0.95;
     transition: all 0.25s;
   }
   &__link {
     color: #fff;
+    &:hover {
+      color:$color-emphasis;
+    }
   }
 }
 
-
-
-// Header
+ //Header
 .header {
-    color: #fff;
+  &__heading {
+    &--emphasis {
+      color:$color-emphasis;
+    }
+  }
+}
+
+//Section skills
+
+.section-portfolio, .section-testimonials, .footer, .address__link {
+  color:$color-primary;
+}
+
+.section-skills, .section-team, .section-clients {
+  color:$color-secondary;
 }
