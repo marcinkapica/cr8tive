@@ -1,6 +1,8 @@
 $(document).ready(function() {
-    triggerMenu();
     triggerSearch();
+    triggerMenu();
+    searchBar = $(".js-searchBar");
+    searchOn = false;
 });
 
 $(window).scroll(function() {
@@ -21,11 +23,13 @@ function triggerMenu(){
     var closeIcon = $(".js-close-icon");
 
     toggleNav.click(function(){
+        searchBar.blur().removeClass("navbar__search-bar--open");
+        searchOn = false;
         menu.toggleClass("menu--visible");
         hamburgerIcon.toggleClass("navbar__toggle-icon--visible");
         closeIcon.toggleClass("navbar__toggle-icon--visible");
         event.stopPropagation();
-  });
+    });
 
     $(document).click(function(){
         menu.removeClass("menu--visible");
@@ -42,10 +46,14 @@ function triggerMenu(){
 
 function triggerSearch() {
     var toggleSearch = $(".js-toggleSearch");
-    var searchBar = $(".js-searchBar");
-
     toggleSearch.on("click",function(){
-        searchBar.toggleClass("navbar__search-bar--open").focus();
+        if (searchOn==false) {
+            searchBar.addClass("navbar__search-bar--open").focus();
+            searchOn = true;
+        } else {
+            searchBar.removeClass("navbar__search-bar--open").blur();
+            searchOn = false;
+        }
         event.stopPropagation();
         searchBar.on("click",function(){
             event.stopPropagation();
@@ -53,6 +61,6 @@ function triggerSearch() {
     });
 
     $(document).on("click", function(){
-        searchBar.removeClass("navbar__search-bar--open").focusout();
+        searchBar.blur().removeClass("navbar__search-bar--open");
     });
 }
