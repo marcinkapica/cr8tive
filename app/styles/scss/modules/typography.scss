@@ -4,7 +4,6 @@ $extraBold: 800;
 
 html {
   font-size:12px;
-  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
   @media screen and (min-width:$tablet) {
     font-size:16px;
   }
@@ -14,6 +13,10 @@ html {
   @media screen and (min-width:$fhd) {
     font-size:16px;
   }
+}
+
+html, .form__field, button, .navbar__search-bar {
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 }
 
 .button, .box__heading, .form__heading {
@@ -41,9 +44,14 @@ html {
   &__search-icon, &__toggle-icon {
     font-size: 1.875rem;
   }
+  &__search-bar {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
 }
 .menu {
   font-size:1.25rem;
+  letter-spacing: 0.05rem;
   text-align: center;
   line-height: normal;
   &__link {
@@ -53,10 +61,25 @@ html {
   }
 }
 
-.header__heading {
-  font-size: 4.375rem;
-  &--emphasis {
-    font-size: 9rem;
+.header {
+  text-align: right;
+  &__heading {
+    font-size: 3rem;
+    line-height: 0.9;
+    @media screen and (min-width:$notebook) {
+      font-size: 4.375rem;
+    }
+    &--emphasis {
+      font-size: 6.3rem;
+      letter-spacing: -0.4rem;
+      @media screen and (min-width:$notebook) {
+        font-size: 9rem;
+      }
+    }
+  }
+  &__text {
+    line-height: 1.8;
+    letter-spacing: 0.06rem;
   }
 }
 
@@ -75,6 +98,7 @@ html {
   }
   &__text {
     font-size: 0.9375rem;
+    line-height:1.6;
   }
 }
 
@@ -88,6 +112,8 @@ html {
 
 .button {
   font-size:1.375rem;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .card {
@@ -125,4 +151,8 @@ html {
 
 .tilde {
   font-size: 4.6875rem;
+}
+
+.address {
+  font-style: normal;
 }

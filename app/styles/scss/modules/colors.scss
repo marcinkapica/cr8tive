@@ -2,11 +2,14 @@
 .navbar {
   background-color: transparent;
   transition: background-color 0.5s;
-  &__toggle, &__search {
+  &__toggle, &__search-icon {
     background: none;
     outline: none;
     color: #fff;
     border: 0;
+  }
+  &__search-icon{
+    -webkit-tap-highlight-color:transparent;
   }
   &__search-bar {
     outline: none;
