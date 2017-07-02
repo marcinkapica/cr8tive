@@ -2,7 +2,7 @@
   @extend %clearfix;
   position:fixed;
   width:100%;
-  padding:0 6rem;
+  padding:0 1rem;
   &__toggle, &__search, &__logo {
     display:inline-block;
     z-index:999;
@@ -14,7 +14,9 @@
     height:3.75rem;
     margin:1.1875rem 0;
   }
-
+  &__search-icon {
+    cursor:pointer;
+  }
   &__search-bar {
     width:0;
     transition: width 0.3s, padding 0.3s;
@@ -22,9 +24,6 @@
       padding:0 0.5rem;
       width:10rem;
     }
-  }
-  .transReset {
-    transition: intial;
   }
 
   &__toggle {

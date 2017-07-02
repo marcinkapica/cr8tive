@@ -1,6 +1,9 @@
+$regular: 400;
+$bold: 700;
+$extraBold: 800;
+
 html {
   font-size:12px;
-  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
   @media screen and (min-width:$tablet) {
     font-size:16px;
   }
@@ -12,18 +15,144 @@ html {
   }
 }
 
+html, .form__field, button, .navbar__search-bar {
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+}
+
+.button, .box__heading, .form__heading {
+  font-weight: $bold;
+}
+
+.menu, .header__heading, .section-skills__heading, .heading, .card__name, .quotation__author {
+  font-weight: $extraBold;
+}
+
+.text-big, .quotation__text {
+  font-style: italic;
+}
+
+.text {
+  font-size:1.25rem;
+}
+
 .navbar {
   text-align: right;
   line-height: 6.125rem;
   &__search-bar {
     line-height: 1.5rem;
   }
+  &__search-icon, &__toggle-icon {
+    font-size: 1.875rem;
+  }
+  &__search-bar {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
 }
 .menu {
+  font-size:1.25rem;
+  letter-spacing: 0.05rem;
   text-align: center;
   line-height: normal;
   &__link {
     font-size: 1.25rem;
+    text-transform:uppercase;
     text-decoration: none;
   }
+}
+
+.header {
+  text-align: right;
+  &__heading {
+    font-size: 3rem;
+    line-height: 0.9;
+    @media screen and (min-width:$notebook) {
+      font-size: 4.375rem;
+    }
+    &--emphasis {
+      font-size: 6.3rem;
+      letter-spacing: -0.4rem;
+      @media screen and (min-width:$notebook) {
+        font-size: 9rem;
+      }
+    }
+  }
+  &__text {
+    line-height: 1.8;
+    letter-spacing: 0.06rem;
+  }
+}
+
+.section-skills {
+  &__heading {
+    font-size: 2.6875rem;
+    &--emphasis {
+      font-size: 4.0635rem;
+    }
+  }
+  &__icon {
+    font-size: 2.5rem;
+  }
+  &__box-heading {
+    font-size: 1.5625rem;
+  }
+  &__text {
+    font-size: 0.9375rem;
+    line-height:1.6;
+  }
+}
+
+.text-big {
+  font-size: 1.8125rem;
+}
+
+.heading {
+  font-size: 2.6875rem;
+}
+
+.button {
+  font-size:1.375rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card {
+  &__name {
+    font-size:1.8125rem;
+  }
+  &__profession {
+    font-size:1.375rem;
+  }
+}
+
+.quotation {
+  &__text, &__profession {
+    font-size: 1.5625rem;
+  }
+  &__author {
+    font-size: 1.8125rem;
+  }
+}
+
+.form {
+  &__heading {
+    font-size: 1.8125rem;
+  }
+  &__field {
+    font-size: 1.0625rem;
+  }
+}
+
+.footer {
+  &__icon-container {
+    font-size: 1.875rem;
+  }
+}
+
+.tilde {
+  font-size: 4.6875rem;
+}
+
+.address {
+  font-style: normal;
 }
