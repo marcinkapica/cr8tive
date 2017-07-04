@@ -1,7 +1,11 @@
+//-------------------- Variables --------------------
+
 $color-primary:#fff;
 $color-secondary:#000;
 $color-emphasis: #eeb501;
 
+
+//-------------------- General colors --------------------
 .color-primary {
   color:$color-primary;
 }
@@ -13,62 +17,7 @@ $color-emphasis: #eeb501;
 .color-emphasis{
   color:$color-emphasis;
 }
-//button
-.button {
-  &:hover {
-    color:$color-emphasis;
-  }
-}
 
-
-
-// Navbar
-.navbar {
-  background-color: transparent;
-  transition: background-color 0.5s;
-  &__toggle, &__search-icon {
-    background: none;
-    outline: none;
-    color: #fff;
-    border: 0;
-  }
-  &__search-bar {
-    outline: none;
-    border: 0;
-  }
-  &--scrolling {
-    background-color: rgba(0,39,255,0.7);
-  }
-}
-
-.menu {
-  background-color: #000;
-  opacity: 0;
-  @media screen and (min-width:$notebook) {
-    background-color:transparent;
-  }
-  &--visible {
-    opacity: 0.95;
-    transition: all 0.25s;
-  }
-  &__link {
-    color: #fff;
-    &:hover {
-      color:$color-emphasis;
-    }
-  }
-}
-
- //Header
-.header {
-  &__heading {
-    &--emphasis {
-      color:$color-emphasis;
-    }
-  }
-}
-
-//Section skills
 
 .section-portfolio, .section-testimonials, .footer, .address__link {
   color:$color-primary;
@@ -77,3 +26,64 @@ $color-emphasis: #eeb501;
 .section-skills, .section-team, .section-clients {
   color:$color-secondary;
 }
+
+.button {
+  &:hover {
+	color:$color-emphasis;
+  }
+}
+
+//-------------------- Navbar --------------------
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.5s;
+  &__toggle, &__search-icon {
+	background: none;
+	outline: none;
+	color: #fff;
+	border: 0;
+  }
+  &__search-bar {
+	outline: none;
+	border: 0;
+  }
+  &--scrolling {
+	background-color: rgba(0,39,255,0.7);
+  }
+}
+
+.menu {
+  background-color: #000;
+  opacity: 0;
+  @media screen and (min-width:$notebook) {
+	background-color:transparent;
+  }
+  &--visible {
+    opacity: 0.95;
+	transition: all 0.25s;
+  }
+  &__link {
+	color: #fff;
+	&:hover {
+	  color:$color-emphasis;
+	}
+  }
+}
+
+ //--------------------Header --------------------
+.header {
+  &__heading {
+	&--emphasis {
+	  color:$color-emphasis;
+	}
+  }
+}
+
+//-------------------- Section skills --------------------
+.section-skills {
+  &__heading--emphasis, &__icon {
+	color:$color-primary;
+	background-color: $color-emphasis;
+  }
+}
+

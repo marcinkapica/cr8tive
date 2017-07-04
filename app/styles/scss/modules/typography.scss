@@ -1,7 +1,9 @@
+//--------------------Variables--------------------
 $regular: 400;
 $bold: 700;
 $extraBold: 800;
 
+//--------------------General typography--------------------
 html {
   font-size:75%;
   @media screen and (min-width:$tablet) {
@@ -34,7 +36,21 @@ html, .form__field, button, .navbar__search-bar {
 .text {
   font-size:1.25rem;
 }
+.text-big {
+  font-size: 1.8125rem;
+}
 
+.heading {
+  font-size: 2.6875rem;
+}
+
+.button {
+  font-size:1.375rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+//--------------------Navbar--------------------
 .navbar {
   text-align: right;
   line-height: 6.125rem;
@@ -61,7 +77,7 @@ html, .form__field, button, .navbar__search-bar {
     text-decoration: none;
   }
 }
-
+//--------------------Header--------------------
 .header {
   text-align: right;
   &__heading {
@@ -83,12 +99,16 @@ html, .form__field, button, .navbar__search-bar {
     letter-spacing: 0.06rem;
   }
 }
-
+//--------------------Section skills--------------------
 .section-skills {
   &__heading {
     font-size: 2.6875rem;
     &--emphasis {
       font-size: 4.0635rem;
+      line-height: 0.85;
+      &:first-of-type{
+        margin-top:0.8rem;
+      }
     }
   }
   &__icon {
@@ -102,21 +122,7 @@ html, .form__field, button, .navbar__search-bar {
     line-height:1.6;
   }
 }
-
-.text-big {
-  font-size: 1.8125rem;
-}
-
-.heading {
-  font-size: 2.6875rem;
-}
-
-.button {
-  font-size:1.375rem;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
+//--------------------Section team--------------------
 .card {
   &__name {
     font-size:1.8125rem;
@@ -125,7 +131,7 @@ html, .form__field, button, .navbar__search-bar {
     font-size:1.375rem;
   }
 }
-
+//--------------------Section testimonials--------------------
 .quotation {
   &__text, &__profession {
     font-size: 1.5625rem;
@@ -134,7 +140,7 @@ html, .form__field, button, .navbar__search-bar {
     font-size: 1.8125rem;
   }
 }
-
+//--------------------Footer--------------------
 .form {
   &__heading {
     font-size: 1.8125rem;

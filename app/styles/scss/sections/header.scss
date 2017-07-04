@@ -2,12 +2,12 @@
   @extend %sectionBackground;
   @extend %clearfix;
   background-image: url("../images/background-header.jpg");
-  padding: 10rem $padSide-phone 0;
+  padding: $headerPadTop $padSide-small 3rem;
   @media screen and (min-width:$desktop) {
-    padding: 10rem 10% 0;
+    padding: $headerPadTop 10% 0;
   }
   @media screen and (min-width:$fhd) {
-    padding: 10rem 15rem 0;
+    padding: $headerPadTop 15rem 0;
   }
   &__image {
     display:none;
