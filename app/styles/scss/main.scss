@@ -1,15 +1,15 @@
-@import 'modules/mediaqueries';
-@import 'modules/base';
-@import 'modules/colors';
-@import 'modules/typography';
+@import 'modules/_mediaqueries';
+@import 'modules/_base';
+@import 'modules/_colors';
+@import 'modules/_typography';
 
-@import 'components/buttons.scss';
-@import 'components/navbar.scss';
+@import 'components/_buttons.scss';
+@import 'components/_navbar.scss';
 
-@import 'sections/header.scss';
-@import 'sections/section-skills.scss';
-@import 'sections/section-portfolio.scss';
-@import 'sections/section-team.scss';
-@import 'sections/section-testimonials.scss';
-@import 'sections/section-clients.scss';
-@import 'sections/footer.scss';
+@import 'sections/_header.scss';
+@import 'sections/_section-skills.scss';
+@import 'sections/_section-portfolio.scss';
+@import 'sections/_section-team.scss';
+@import 'sections/_section-testimonials.scss';
+@import 'sections/_section-clients.scss';
+@import 'sections/_footer.scss';
