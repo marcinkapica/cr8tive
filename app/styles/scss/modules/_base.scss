@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+.text-big {
+  margin: 0 0 1rem;
+}
+
+.heading {
+  margin: 0 0 1.75rem;
+}
+
 //--------------------Variables--------------------
 $padSide-small: 3rem;
 $padSide-medium: 6rem;
@@ -37,5 +45,3 @@ $skillsPadVertical: 4rem;
     @content;
   }
 }
-
-//--------------------Section-skills--------------------

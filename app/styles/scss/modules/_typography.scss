@@ -44,10 +44,18 @@ html, .form__field, button, .navbar__search-bar {
   font-size: 2.6875rem;
 }
 
+.tilde {
+  line-height: 0.1;
+}
+
 .button {
   font-size:1.375rem;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.section-portfolio, .section-team, .section-testimonials, .section-clients, .footer {
+  text-align: center;
 }
 
 //--------------------Navbar--------------------
