@@ -1,47 +1,51 @@
-//--------------------General styles--------------------
-* {
-  box-sizing: border-box;
-}
-
-.text-big {
-  margin: 0 0 1rem;
-}
-
-.heading {
-  margin: 0 0 1.75rem;
-}
-
 //--------------------Variables--------------------
 $padSide-small: 3rem;
-$padSide-medium: 6rem;
 $padSide-big: 17.5%;
 
-$padTop: 6.25rem;
+$padVertical: 6.25rem;
 
-//Header
 $headerPadTop: 9rem;
 
-//Section skills
 $skillsPadVertical: 4rem;
 
 //--------------------Mixins & placeholders--------------------
 
 %clearfix {
-  &::after {
-    content:"";
-    display:table;
-    clear:both;
-  }
+	&::after {
+		content:"";
+		display:table;
+		clear:both;
+	}
 }
 
 %sectionBackground {
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position: 50% 50%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
 }
 
 @mixin media-min($size) {
-  @media screen and (min-width:$size) {
-    @content;
-  }
+	@media screen and (min-width:$size) {
+		@content;
+	}
+}
+
+//--------------------General styles--------------------
+* {
+	box-sizing: border-box;
+}
+
+.text-big {
+	margin: 0 0 1rem;
+}
+
+.heading {
+	margin: 0 0 1.75rem;
+}
+
+.section-portfolio, .section-team, .section-testimonials, .section-clients {
+	padding: $padVertical $padSide-small;
+	@include media-min($notebook) {
+		padding: $padVertical $padSide-big;
+	}
 }

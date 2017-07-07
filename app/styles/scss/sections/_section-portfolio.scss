@@ -1,51 +1,47 @@
 .section-portfolio {
-  @extend %sectionBackground;
-  background-image: url("../images/background-2.jpg");
-  padding: $padTop $padSide-small;
-  @include media-min($notebook) {
-    padding: $padTop $padSide-big;
-  }
-  &__gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin:-1rem 0 1.5rem;
-  }
-  &__container-left {
-    flex-basis: 50%;
-  }
-  &__container-right {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-basis: 49.25%;
-  }
-  &__item {
-    flex-basis: 50%;
-    flex-grow:1;
-  }
-  &__image {
-    display: block;
-    padding: 0.5rem;
-    @include media-min($tablet) {
-      padding: 1rem;
-    }
-    width:100%;
-    &--big {
-      padding-left: 0.25rem;
-      @include media-min($tablet) {
-        padding-left: 0.5rem;
-      }
-    }
-  }
+	@extend %sectionBackground;
+	background-image: url("../images/background-2.jpg");
+	&__gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin:-1rem 0 1.5rem;
+	}
+	&__container-left {
+		flex-basis: 50%;
+	}
+	&__container-right {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		flex-basis: 49.25%;
+	}
+	&__item {
+		flex-basis: 50%;
+		flex-grow:1;
+	}
+	&__image {
+		display: block;
+		padding: 0.5rem;
+		@include media-min($tablet) {
+			padding: 1rem;
+		}
+		width:100%;
+		&--big {
+			padding-left: 0.25rem;
+			@include media-min($tablet) {
+				padding-left: 0.5rem;
+			}
+		}
+	}
 }
 
 .text--portfolio {
-  margin-bottom:4.25rem;
-  @include media-min($notebook) {
-    width: 48%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	margin-bottom:4.25rem;
+	@include media-min($notebook) {
+		width: 48%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

@@ -1,42 +1,42 @@
 .section-skills {
-  @extend %sectionBackground;
-  @extend %clearfix;
-  padding: $skillsPadVertical $padSide-small;
-  background-image: url("../images/background-1.jpg");
-  @include media-min($notebook) {
-    padding: $skillsPadVertical $padSide-big 0;
-  }
-  &__heading {
-    margin-top: 0;
-  @include media-min($notebook) {
-      float:left;
-      margin-top:7rem;
-    }
-    &--emphasis {
-      display: inline-block;
-      margin-bottom: 0.4375rem;
-      padding: 0 1rem 0.2rem 0.5rem;
-    }
-  }
-  &__box-container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  &__box {
-    text-align: center;
-    flex-basis:45%;
-    margin-bottom:1rem;
-    @include media-min($notebook) {
-      margin-left: auto;
-      margin-bottom:6.25rem;
-    }
-    @include media-min($desktop) {
-      flex-basis:35%;
-    }
-  }
-  &__icon {
-    padding: 1.625rem;
-    border-radius: 50%;
-  }
+	@extend %sectionBackground;
+	@extend %clearfix;
+	padding: $skillsPadVertical $padSide-small;
+	background-image: url("../images/background-1.jpg");
+	@include media-min($notebook) {
+		padding: $skillsPadVertical $padSide-big 0;
+	}
+	&__heading {
+		margin-top: 0;
+		@include media-min($notebook) {
+			float:left;
+			margin-top:7rem;
+		}
+		&--emphasis {
+			display: inline-block;
+			margin-bottom: 0.4375rem;
+			padding: 0 1rem 0.2rem 0.5rem;
+		}
+	}
+	&__box-container {
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	&__box {
+		text-align: center;
+		flex-basis:45%;
+		margin-bottom:1rem;
+		@include media-min($notebook) {
+			margin-left: auto;
+			margin-bottom:6.25rem;
+		}
+		@include media-min($desktop) {
+			flex-basis:35%;
+		}
+	}
+	&__icon {
+		padding: 1.625rem;
+		border-radius: 50%;
+	}
 }

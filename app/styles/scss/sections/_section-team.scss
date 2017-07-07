@@ -1,0 +1,31 @@
+.section-team {
+	@extend %sectionBackground;
+	background-image: url("../images/background-3.jpg");
+	&__card-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__card {
+		flex-basis:35%;
+		padding:0 0.5rem;
+		margin-top:2rem;
+		@include media-min($tablet) {
+			flex-basis:25%;
+			margin-bottom:4rem;
+			&:nth-of-type(2n+1){
+				margin:5.5rem 0 0;
+			}
+		}
+	}
+	&__image {
+		max-width:100%;
+	}
+	&__name {
+		margin-bottom: 0;
+	}
+	&__profession {
+		margin: 0.5rem 0 0;
+	}
+}
+

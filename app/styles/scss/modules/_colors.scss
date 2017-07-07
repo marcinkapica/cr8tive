@@ -18,8 +18,7 @@ $color-emphasis: #eeb501;
   color:$color-emphasis;
 }
 
-
-.section-portfolio, .section-testimonials, .footer, .address__link {
+.header, .section-portfolio, .section-testimonials, .footer, .address__link {
   color:$color-primary;
 }
 
@@ -73,10 +72,10 @@ $color-emphasis: #eeb501;
  //--------------------Header --------------------
 .header {
   &__heading {
-	&--emphasis {
-	  color:$color-emphasis;
+		&--emphasis {
+			color:$color-emphasis;
+		}
 	}
-  }
 }
 
 //-------------------- Section skills --------------------
