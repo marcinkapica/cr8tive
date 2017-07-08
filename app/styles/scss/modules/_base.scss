@@ -2,7 +2,8 @@
 $padSide-small: 3rem;
 $padSide-big: 17.5%;
 
-$padVertical: 6.25rem;
+$padVertical-small: 4rem;
+$padVertical-big: 6.25rem;
 
 $headerPadTop: 9rem;
 
@@ -44,8 +45,16 @@ $skillsPadVertical: 4rem;
 }
 
 .section-portfolio, .section-team, .section-testimonials, .section-clients {
-	padding: $padVertical $padSide-small;
+	padding: $padVertical-small $padSide-small;
 	@include media-min($notebook) {
-		padding: $padVertical $padSide-big;
+		padding: $padVertical-big $padSide-big;
 	}
+}
+
+.person-name {
+	margin: 0;
+}
+
+.person-profession {
+	margin: 0.5rem 0 0;
 }

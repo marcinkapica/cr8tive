@@ -25,11 +25,11 @@ html, .form__field, button, .navbar__search-bar {
 	font-weight: $bold;
 }
 
-.menu, .header__heading, .section-skills__heading, .heading, .card__name, .quotation__author {
+.menu, .header__heading, .section-skills__heading, .heading {
 	font-weight: $extraBold;
 }
 
-.text-big, .quotation__text {
+.text-big {
 	font-style: italic;
 }
 
@@ -56,6 +56,15 @@ html, .form__field, button, .navbar__search-bar {
 
 .section-portfolio, .section-team, .section-testimonials, .section-clients, .footer {
 	text-align: center;
+}
+
+.person-name{
+	font-size: 1.8125rem;
+	font-weight: $extraBold;
+}
+
+.person-profession {
+	font-size:1.375rem;
 }
 
 //--------------------Navbar--------------------
@@ -130,24 +139,39 @@ html, .form__field, button, .navbar__search-bar {
 		line-height:1.6;
 	}
 }
-//--------------------Section team--------------------
-.section-team {
-	&__name {
-		font-size:1.8125rem;
-		font-weight: $extraBold ;
-	}
-	&__profession {
-		font-size:1.375rem;
-	}
-}
 
 //--------------------Section testimonials--------------------
-.quotation {
+.section-testimonials {
 	&__text, &__profession {
 		font-size: 1.5625rem;
 	}
-	&__author {
-		font-size: 1.8125rem;
+	&__text {
+		position: relative;
+		font-style: italic;
+		quotes: "“" "”" "‘" "’";
+		&::before {
+			content: open-quote;
+			font-size: 8rem;
+			position: absolute;
+			left: -4rem;
+			top: -3rem;
+			@include media-min($tablet){
+				font-size: 12rem;
+				left: -7rem;
+			}
+		}
+		&::after {
+			content: close-quote;
+			font-size: 8rem;
+			position: absolute;
+			right: -2.25rem;
+			bottom: -6rem;
+			@include media-min($tablet){
+				font-size: 12rem;
+				right: -5rem;
+				bottom: -9rem;
+			}
+		}
 	}
 }
 //--------------------Footer--------------------
