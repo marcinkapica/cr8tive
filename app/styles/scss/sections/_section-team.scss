@@ -10,8 +10,8 @@
 		}
 	}
 	&__card {
-		flex-basis:45%;
-		max-width: 45%; //fix for IE 10/11
+		flex-basis:50%;
+		max-width: 50%; //fix for IE 10/11
 		padding:0 0.5rem;
 		margin-top:2rem;
 		@include media-min($tablet) {
