@@ -1,0 +1,27 @@
+.section-clients {
+	@extend %sectionBackground;
+	background-image: url("../images/background-5.jpg");
+	&__logos-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 3.5rem;
+	}
+	&__item {
+		border: 1px solid grey;
+		display: flex;
+		flex-basis: 50%;
+		max-width: 50%; //fix for IE 10/11
+		flex-grow: 1;
+		justify-content: center;
+		align-items: center;
+		@include media-min($tablet){
+			flex-basis: 25%;
+			max-width: 25%; //fix for IE 10/11
+		}
+	}
+	&__image {
+		max-width: 100%;
+		padding: 3.5rem 0;
+	}
+}
