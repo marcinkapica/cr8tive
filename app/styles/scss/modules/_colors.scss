@@ -86,3 +86,10 @@ $color-emphasis: #eeb501;
   }
 }
 
+//-------------------- Section clients --------------------
+.section-clients {
+	&__item{
+		border-color: #a3a3a3;
+	}
+}
+

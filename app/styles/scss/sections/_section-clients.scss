@@ -1,14 +1,19 @@
 .section-clients {
 	@extend %sectionBackground;
 	background-image: url("../images/background-5.jpg");
-	&__logos-container {
+	&__container {
+		overflow: hidden; //applying overflow:hidden to hide right and bottom border
+	}
+	&__logos-grid {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin-top: 3.5rem;
+		margin: 3.5rem -1px -1px 0; //applying negative margins to compensate for right and bottom border
+		overflow: hidden;
 	}
 	&__item {
-		border: 1px solid grey;
+		border-style: solid;
+		border-width: 0 1px 1px 0;
 		display: flex;
 		flex-basis: 50%;
 		max-width: 50%; //fix for IE 10/11
@@ -21,7 +26,16 @@
 		}
 	}
 	&__image {
-		max-width: 100%;
-		padding: 3.5rem 0;
+		max-width: 50%;
+		padding: 1.5rem 0;
+		@include media-min($tablet){
+			max-width: 100%;
+			padding: 3.5rem 0;
+		}
 	}
+}
+
+.text--clients {
+	width: $textBigWidth;
+	margin: 0 auto;
 }
