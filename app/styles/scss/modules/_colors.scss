@@ -3,6 +3,7 @@
 $color-primary:#fff;
 $color-secondary:#000;
 $color-emphasis: #eeb501;
+$inputBackground: #2e2e2e;
 
 
 //-------------------- General colors --------------------
@@ -93,3 +94,14 @@ $color-emphasis: #eeb501;
 	}
 }
 
+//-------------------- Footer --------------------
+.footer {
+}
+
+.form {
+	&__field {
+		color: $color-primary;
+		background-color: $inputBackground;
+		border: transparent;
+	}
+}

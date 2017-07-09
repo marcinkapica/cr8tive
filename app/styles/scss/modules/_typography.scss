@@ -175,11 +175,12 @@ html, .form__field, button, .navbar__search-bar {
 	}
 }
 //--------------------Footer--------------------
+.form-heading {
+	font-size: 1.8125rem;
+}
 .form {
-	&__heading {
-		font-size: 1.8125rem;
-	}
 	&__field {
+		line-height: normal;
 		font-size: 1.0625rem;
 	}
 }

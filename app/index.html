@@ -79,7 +79,7 @@
 			<p class="text-big">Here is our awesome portfolio</p>
 			<h2 class="heading">Awesome Portfolio</h2>
 			<span class="tilde">~</span>
-			<p class="text text--portfolio">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+			<p class="section-portfolio__text text text--narrow">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
 
 			<div class="section-portfolio__gallery">
 				<div class="section-portfolio__container-left">
@@ -136,7 +136,7 @@
 			<h2 class="heading">Testimonials</h2>
 			<span class="tilde color-emphasis">~</span>
 			<figure class="section-testimonials__testimonial">
-				<q class="section-testimonials__text">
+				<q class="section-testimonials__text text--wide">
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet  Lorem ipsum dolor sit amet, consec
 				</q>
 				<img class="section-testimonials__image" src="images\testimonial-1.jpg">
@@ -152,7 +152,7 @@
 			<p class="text-big">Lorem ipsum dolor sittt amet,</p>
 			<h2 class="heading">Our Clients</h2>
 			<span class="tilde color-emphasis">~</span>
-			<p class="text text--clients">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
+			<p class="section-clients__text text text--wide">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
 			<div class="section-clients__container">
 				<div class="section-clients__logos-grid">
 					<div class="section-clients__item"><img class="section-clients__image" src="images\logo-adidas.png" alt="adidas logotype"></div>
@@ -171,19 +171,17 @@
 		<footer class="footer">
 			<p class="text-big">Lorem ipsum dolor sittt amet,</p>
 			<h2 class="heading">Get in Touch</h2>
-			<span class="tilde">~</span>
-			<p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+			<span class="tilde color-emphasis">~</span>
+			<p class="footer__text text text--wide">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tin</p>
 			<div id="map" class="map-container"></div>
-			<div class="form">
-				<h3 class="form__heading">Send us a message</h3>
-				<form method="post">
-					<input type="text" name="name" placeholder="Name" class="form__field">
-					<input type="email" name="email" placeholder="Email" class="form__field">
-					<input type="tel" name="phone" placeholder="Phone" class="form__field">
-					<textarea name="message" placeholder="Message" class="form__field"></textarea>
-					<button type="submit" class="button color-primary">submit</button>
-				</form>
-			</div>
+			<h3 class="form-heading">Send us a message</h3>
+			<form class="form" method="post">
+				<input class="form__field form__item" type="text" name="name" placeholder="Name">
+				<input class="form__field form__item" type="email" name="email" placeholder="Email">
+				<input class="form__field form__item" type="tel" name="phone" placeholder="Phone">
+				<textarea class="form__field form__item form__message" name="message" placeholder="Message"></textarea>
+				<button type="submit" class="button color-primary form__item form__button">submit</button>
+			</form>
 			<div class="footer__icon-container">
 				<i class="fa fa-facebook footer__icon" aria-hidden="true"></i>
 				<i class="fa fa-twitter footer__icon" aria-hidden="true"></i>

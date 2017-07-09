@@ -39,11 +39,3 @@
 		}
 	}
 }
-
-.text--portfolio {
-	margin:0 auto 3.75rem;
-	width: $textBigWidth;
-	@include media-min($notebook) {
-		width: $textSmallWidth;
-	}
-}

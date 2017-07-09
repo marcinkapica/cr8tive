@@ -1,4 +1,39 @@
+.footer {
+	@extend %sectionBackground;
+	background-image: url("../images/background-6.jpg");
+
+	&__copyright {
+		display: block;
+		border-top: 6px solid $color-emphasis;
+		padding-top: 3.75rem;
+	}
+}
+.form-heading {
+	margin-top: 4.375rem;
+}
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	&__item {
+		margin:0 1rem 1rem 0;
+		flex-basis: 30%;
+		flex-grow: 1;
+		height: 4rem;
+	}
+	&__field {
+		padding: 1.25rem 0 1.25rem 1rem;
+	}
+	&__message {
+		flex-basis: 80%;
+	}
+	&__button {
+		flex-basis: 10%;
+	}
+
+}
+
 .map-container {
-  width:200px;
+  width:auto;
   height:200px;
 }

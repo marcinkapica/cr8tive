@@ -8,7 +8,7 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		margin: 3.5rem -1px -1px 0; //applying negative margins to compensate for right and bottom border
+		margin: 0 -1px -1px 0; //applying negative margins to compensate for right and bottom border
 		overflow: hidden;
 	}
 	&__item {
@@ -33,9 +33,4 @@
 			padding: 3.5rem 0;
 		}
 	}
-}
-
-.text--clients {
-	width: $textBigWidth;
-	margin: 0 auto;
 }

@@ -49,10 +49,28 @@ $textBigWidth: 80%;
 	margin: 0 0 1.75rem;
 }
 
-.section-portfolio, .section-team, .section-testimonials, .section-clients {
+.text {
+	&--narrow {
+		@include media-min($tablet) {
+			width:50%;
+		}
+		width:80%;
+	}
+	&--wide {
+		width:80%;
+	}
+}
+
+.section-portfolio, .section-team, .section-testimonials, .section-clients, .footer {
 	padding: $padVertical-small $padSide-small;
 	@include media-min($notebook) {
 		padding: $padVertical-big $padSide-big;
+	}
+}
+
+.header, .section-portfolio, .section-clients, .footer {
+	&__text {
+		margin: 0 auto 3.5rem;
 	}
 }
 
