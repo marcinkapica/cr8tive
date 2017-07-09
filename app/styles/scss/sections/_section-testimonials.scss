@@ -11,7 +11,7 @@
 	}
 	&__text {
 		display: block;
-		max-width: 80%;
+		width: $textBigWidth;
 		margin: 2rem auto 1.75rem;
 	}
 }

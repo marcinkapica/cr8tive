@@ -41,10 +41,9 @@
 }
 
 .text--portfolio {
-	margin-bottom:3.75rem;
+	margin:0 auto 3.75rem;
+	width: $textBigWidth;
 	@include media-min($notebook) {
-		width: 48%;
-		margin-left: auto;
-		margin-right: auto;
+		width: $textSmallWidth;
 	}
 }
