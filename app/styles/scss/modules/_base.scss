@@ -1,9 +1,9 @@
 //--------------------Variables--------------------
-$padSide-small: 1.5rem;
-$padSide-big: 17.5%;
+$padSideSmall: 1.5rem;
+$padSideBig: 17.5%;
 
-$padVertical-small: 4rem;
-$padVertical-big: 6.25rem;
+$padVerticalSmall: 4rem;
+$padVerticalBig: 6.25rem;
 
 $headerPadTop: 9rem;
 $skillsPadVertical: 4rem;
@@ -13,6 +13,10 @@ $gallerySpacing: 1rem;
 $textSmallWidth: 50%;
 $textBigWidth: 80%;
 
+$formSpacing: 1rem;
+$iconSize: 3.625rem;
+
+$copyrightBorderSize: 6px;
 
 //--------------------Mixins & placeholders--------------------
 
@@ -61,10 +65,10 @@ $textBigWidth: 80%;
 	}
 }
 
-.section-portfolio, .section-team, .section-testimonials, .section-clients, .footer {
-	padding: $padVertical-small $padSide-small;
+.section-portfolio, .section-team, .section-testimonials, .section-clients {
+	padding: $padVerticalSmall $padSideSmall;
 	@include media-min($notebook) {
-		padding: $padVertical-big $padSide-big;
+		padding: $padVerticalBig $padSideBig;
 	}
 }
 

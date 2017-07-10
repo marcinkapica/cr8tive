@@ -1,10 +1,10 @@
 .section-skills {
 	@extend %sectionBackground;
 	@extend %clearfix;
-	padding: $skillsPadVertical $padSide-small;
+	padding: $skillsPadVertical $padSideSmall;
 	background-image: url("../images/background-1.jpg");
 	@include media-min($notebook) {
-		padding: $skillsPadVertical $padSide-big 0;
+		padding: $skillsPadVertical $padSideBig 0;
 	}
 	&__heading {
 		margin-top: 0;

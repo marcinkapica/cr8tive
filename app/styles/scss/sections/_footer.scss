@@ -1,11 +1,25 @@
 .footer {
 	@extend %sectionBackground;
 	background-image: url("../images/background-6.jpg");
-
+	padding: $padVerticalSmall $padSideSmall $padVerticalSmall;
+	@include media-min($notebook) {
+		padding: $padVerticalBig $padSideBig $padVerticalSmall;
+	}
+	&__map {
+		width:auto;
+		height:18rem;
+	}
+	&__icon {
+		border-radius: 50%;
+		width: $iconSize;
+		height: $iconSize;
+		margin: 2.25rem 0.5rem;
+	}
 	&__copyright {
 		display: block;
-		border-top: 6px solid $color-emphasis;
+		border-top: $copyrightBorderSize solid $color-emphasis;
 		padding-top: 3.75rem;
+		margin-top: calc(3.75rem + #{$copyrightBorderSize});
 	}
 }
 .form-heading {
@@ -15,9 +29,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	margin-right: -$formSpacing;
+	justify-content: center;
 	&__item {
-		margin:0 1rem 1rem 0;
+		margin:0 $formSpacing $formSpacing 0;
 		flex-basis: 30%;
+		min-width: 0;
 		flex-grow: 1;
 		height: 4rem;
 	}
@@ -28,12 +45,13 @@
 		flex-basis: 80%;
 	}
 	&__button {
-		flex-basis: 10%;
+		flex-basis: auto;
+		flex-grow: 0;
 	}
-
 }
 
-.map-container {
-  width:auto;
-  height:200px;
+.address {
+	&__link {
+		text-decoration: none;
+	}
 }

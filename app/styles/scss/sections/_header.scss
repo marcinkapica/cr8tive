@@ -2,7 +2,7 @@
 	@extend %sectionBackground;
 	@extend %clearfix;
 	background-image: url("../images/background-header.jpg");
-	padding: $headerPadTop $padSide-small 3rem;
+	padding: $headerPadTop $padSideSmall 3rem;
 	@media screen and (min-width:$desktop) {
 		padding: $headerPadTop 10% 0;
 	}

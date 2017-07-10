@@ -28,8 +28,11 @@ $inputBackground: #2e2e2e;
 }
 
 .button {
+	background-color: transparent;
+	outline: none;
   &:hover {
-	color:$color-emphasis;
+		color: $color-emphasis;
+		border-color: $color-emphasis;
   }
 }
 
@@ -96,6 +99,9 @@ $inputBackground: #2e2e2e;
 
 //-------------------- Footer --------------------
 .footer {
+	&__icon {
+		background-color: $color-emphasis;
+	}
 }
 
 .form {

@@ -189,6 +189,9 @@ html, .form__field, button, .navbar__search-bar {
 	&__icon-container {
 		font-size: 1.875rem;
 	}
+	&__icon {
+		line-height: $iconSize;
+	}
 }
 
 .tilde {
