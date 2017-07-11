@@ -9,11 +9,14 @@
 		width:auto;
 		height:18rem;
 	}
+	&__icon-link {
+		display: inline-block;
+		margin: 2.25rem 0.5rem;
+	}
 	&__icon {
 		border-radius: 50%;
 		width: $iconSize;
 		height: $iconSize;
-		margin: 2.25rem 0.5rem;
 	}
 	&__copyright {
 		display: block;
@@ -47,11 +50,5 @@
 	&__button {
 		flex-basis: auto;
 		flex-grow: 0;
-	}
-}
-
-.address {
-	&__link {
-		text-decoration: none;
 	}
 }

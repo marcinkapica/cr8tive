@@ -67,6 +67,10 @@ html, .form__field, button, .navbar__search-bar {
 	font-size:1.375rem;
 }
 
+.text-link {
+	text-decoration: none;
+}
+
 //--------------------Navbar--------------------
 .navbar {
 	text-align: right;
@@ -78,7 +82,7 @@ html, .form__field, button, .navbar__search-bar {
 		font-size: 1.5rem;
 		line-height: 1.875rem;
 	}
-	&__search-icon, &__toggle-icon {
+	&__icon {
 		font-size: 1.875rem;
 	}
 }
@@ -88,10 +92,9 @@ html, .form__field, button, .navbar__search-bar {
 	text-align: center;
 	line-height: normal;
 	list-style: none;
-	&__link {
+	&__anchor {
 		font-size: 1.25rem;
 		text-transform:uppercase;
-		text-decoration: none;
 	}
 }
 //--------------------Header--------------------

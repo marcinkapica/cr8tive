@@ -19,7 +19,7 @@ $inputBackground: #2e2e2e;
   color:$color-emphasis;
 }
 
-.header, .section-portfolio, .section-testimonials, .footer, .address__link {
+.header, .section-portfolio, .section-testimonials, .footer, .text-link {
   color:$color-primary;
 }
 
@@ -29,23 +29,30 @@ $inputBackground: #2e2e2e;
 
 .button {
 	background-color: transparent;
-	outline: none;
-  &:hover {
+	&:hover, &:focus {
+		outline: 0;
 		color: $color-emphasis;
 		border-color: $color-emphasis;
-  }
+	}
+}
+
+.text-link {
+	outline: none;
+	&:hover, &:focus {
+		color: $color-emphasis;
+	}
 }
 
 //-------------------- Navbar --------------------
 .navbar {
   background-color: transparent;
   transition: background-color 0.5s;
-  &__toggle, &__search-icon {
-	background: none;
-	outline: none;
-	color: #fff;
-	border: 0;
-  }
+
+	&__button {
+		background-color: transparent;
+		border: transparent;
+		color: $color-primary;
+	}
   &__search-bar {
 	outline: none;
 	border: 0;
@@ -63,13 +70,10 @@ $inputBackground: #2e2e2e;
   }
   &--visible {
     opacity: 0.95;
-	transition: all 0.25s;
+		transition: all 0.25s;
   }
-  &__link {
-	color: #fff;
-	&:hover {
-	  color:$color-emphasis;
-	}
+  &__anchor {
+		color: $color-primary;
   }
 }
 
@@ -99,6 +103,15 @@ $inputBackground: #2e2e2e;
 
 //-------------------- Footer --------------------
 .footer {
+	&__icon-link {
+		&:hover, &:focus {
+			.footer__icon {
+				color: $color-emphasis;
+				background-color: $color-primary;
+				transition: 0.3s;
+			}
+		}
+	}
 	&__icon {
 		background-color: $color-emphasis;
 	}

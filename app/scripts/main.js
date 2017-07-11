@@ -23,24 +23,24 @@ function triggerMenu(){
     var closeIcon = $(".js-close-icon");
 
     toggleNav.click(function(){
-        searchBar.blur().removeClass("navbar__search-bar--open");
+        searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1");
         searchOn = false;
         menu.toggleClass("menu--visible");
-        hamburgerIcon.toggleClass("navbar__toggle-icon--visible");
-        closeIcon.toggleClass("navbar__toggle-icon--visible");
+        hamburgerIcon.toggleClass("navbar__icon--visible");
+        closeIcon.toggleClass("navbar__icon--visible");
         event.stopPropagation();
     });
 
     $(document).click(function(){
         menu.removeClass("menu--visible");
-        closeIcon.removeClass("navbar__toggle-icon--visible");
-        hamburgerIcon.addClass("navbar__toggle-icon--visible");
+        closeIcon.removeClass("navbar__icon--visible");
+        hamburgerIcon.addClass("navbar__icon--visible");
     });
 
     $(window).resize(function(){
         menu.removeClass("menu--visible");
-        closeIcon.removeClass("navbar__toggle-icon--visible");
-        hamburgerIcon.addClass("navbar__toggle-icon--visible");
+        closeIcon.removeClass("navbar__icon--visible");
+        hamburgerIcon.addClass("navbar__icon--visible");
     });
 }
 
@@ -48,10 +48,10 @@ function triggerSearch() {
     var toggleSearch = $(".js-toggleSearch");
     toggleSearch.on("click",function(){
         if (searchOn==false) {
-            searchBar.addClass("navbar__search-bar--open").focus();
+            searchBar.addClass("navbar__search-bar--open").focus().attr("tabIndex","0");
             searchOn = true;
         } else {
-            searchBar.removeClass("navbar__search-bar--open").blur();
+            searchBar.removeClass("navbar__search-bar--open").blur().attr("tabIndex","-1");
             searchOn = false;
         }
         event.stopPropagation();
@@ -61,6 +61,6 @@ function triggerSearch() {
     });
 
     $(document).on("click", function(){
-        searchBar.blur().removeClass("navbar__search-bar--open");
+        searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1");
     });
 }

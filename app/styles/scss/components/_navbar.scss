@@ -2,7 +2,7 @@
   @extend %clearfix;
   position: fixed;
   width: 100%;
-  padding: 0 10% 0;
+  padding: 0 5% 0;
   z-index: 999;
   @media screen and (min-width:$desktop) {
     padding:1.875rem 17.5%;
@@ -12,7 +12,7 @@
     padding-top:0;
     padding-bottom:0;
   }
-  &__toggle, &__search-form, &__logo {
+  &__button--toggle, &__search-form, &__logo {
     display:inline-block;
     z-index:999;
     position: relative;
@@ -28,13 +28,16 @@
     width:11.125rem;
     height:3.75rem;
   }
-  &__search {
-    line-height: initial;
+	&__logo-anchor {
+		display: inline-block;
+	}
+  &__button {
+		cursor:pointer;
+		&--search{
+			margin-left:0.5rem;
+		}
   }
-  &__search-icon {
-    margin-left:0.5rem;
-    cursor:pointer;
-  }
+
   &__search-bar {
     width:0;
     transition: width 0.3s, padding 0.3s;
@@ -46,18 +49,21 @@
       }
     }
   }
-  &__toggle {
-    @media screen and (min-width:$notebook) {
-      display:none;
-    }
-  }
-  &__toggle-icon {
-    display: none!important; //overriding Font Awesome default display property
-    &--visible {
-      cursor:pointer;
-      display: inline-block!important;
-    }
-  }
+	&__button {
+		&--toggle {
+			@media screen and (min-width:$notebook) {
+				display:none;
+			}
+		}
+	}
+  &__icon {
+		&--toggle {
+			display: none!important; //overriding Font Awesome default display property
+		}
+		&--visible {
+			display: inline-block!important;
+		}
+	}
 }
 
 .menu {
@@ -86,12 +92,13 @@
       display:inline-block;
     }
   }
-  &__link {
+  &__anchor {
     display:inline-block;
     margin: 1rem;
   }
   &--visible {
     visibility:visible;
 		overflow: hidden;
+		z-index: -1;
   }
 }
