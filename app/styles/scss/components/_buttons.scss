@@ -4,7 +4,24 @@
   border-style:solid;
   padding: 0.7rem 1.4rem;
   transition: all 0.1s;
-  &:active {
-    transform: scale(0.9);
-  }
+	position: relative;
+	z-index:1;
+	&:hover, &:focus {
+		transition: 0.5s;
+		&::before {
+			transform: scaleX(1);
+		}
+	}
+	&::before{
+		content: "";
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		position: absolute;
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: 0;
+		transition: 0.5s;
+	}
 }
