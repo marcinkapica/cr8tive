@@ -7,17 +7,6 @@ $inputBackground: #2e2e2e;
 
 
 //-------------------- General colors --------------------
-.color-primary {
-  color:$color-primary;
-}
-
-.color-secondary {
-  color:$color-secondary;
-}
-
-.color-emphasis{
-  color:$color-emphasis;
-}
 
 .header, .section-portfolio, .section-testimonials, .footer, .text-link {
   color:$color-primary;
@@ -28,6 +17,8 @@ $inputBackground: #2e2e2e;
 }
 
 .button {
+	color: $color-primary;
+	border-color: $color-primary;
 	background-color: transparent;
 	&::before {
 		background-color:$color-emphasis;
@@ -41,6 +32,18 @@ $inputBackground: #2e2e2e;
 .text-link {
 	outline: none;
 	&:hover, &:focus {
+		color: $color-emphasis;
+	}
+}
+
+.tilde {
+	&--emphasis {
+		color: $color-emphasis;
+	}
+}
+
+.person-name {
+	&--emphasis {
 		color: $color-emphasis;
 	}
 }
