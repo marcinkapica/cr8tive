@@ -21,6 +21,8 @@ $(window).scroll(function() {
 function smoothScroll() {
     jQuery('a[href*="#"]:not([href="#"])').click(function () {
         $(".js-menu").removeClass("menu--visible");
+        $(".js-close-icon").removeClass("navbar__icon--visible");
+        $(".js-hamburger-icon").addClass("navbar__icon--visible");
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = jQuery(this.hash);
             target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
