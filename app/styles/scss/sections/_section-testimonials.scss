@@ -2,7 +2,7 @@
 	@extend %sectionBackground;
 	background-image: url("../images/background-4.jpg");
 	&__testimonial {
-		margin:0;
+		margin:0 1rem;
 	}
 	&__image {
 		display: block;

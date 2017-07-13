@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    initCarousel();
     smoothScroll();
     triggerSearch();
     triggerMenu();
@@ -81,3 +82,16 @@ function triggerSearch() {
         searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1");
     });
 }
+
+function initCarousel() {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        items: 1,
+        center: true,
+        margin: 20,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplaySpeed:800
+    });
+}
+
