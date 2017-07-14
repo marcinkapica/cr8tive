@@ -1,9 +1,6 @@
 .section-testimonials {
 	@extend %sectionBackground;
 	background-image: url("../images/background-4.jpg");
-	&__testimonial {
-		margin:0 1rem;
-	}
 	&__image {
 		display: block;
 		margin: 0 auto;

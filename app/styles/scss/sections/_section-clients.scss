@@ -27,6 +27,7 @@
 	}
 	&__image {
 		max-width: 50%;
+		flex-shrink: 0;
 		padding: 1.5rem 0;
 		@include media-min($tablet){
 			max-width: 100%;

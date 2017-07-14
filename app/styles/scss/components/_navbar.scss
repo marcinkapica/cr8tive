@@ -21,25 +21,33 @@
   }
   &__logo {
     vertical-align: middle;
-    width:11.125rem;
-    height:3.75rem;
+		width:8rem;
+		@include media-min($notebook) {
+			width:11.125rem;
+		}
   }
 	&__logo-anchor {
 		display: inline-block;
 	}
   &__button {
 		cursor:pointer;
-		&--search{
-			margin-left:0.5rem;
+		padding: 0 0.4rem;
+		@include media-min($tablet) {
+			padding: 0 0.4rem;
 		}
+		//&--search{
+		//	margin: 0 0.5rem;
+		//}
   }
 
   &__search-bar {
     width:0;
-    transition: width 0.3s, padding 0.3s;
+		visibility: hidden; //hiding element because in IE is still visible despite width 0
+    transition: width 0.3s, visibility 0.3s, padding 0.3s;
     &--open {
       padding:0 0.5rem;
       width:7rem;
+			visibility: visible;
       @media screen and (min-width:$mobile_l) {
         width:15rem;
       }
@@ -90,7 +98,7 @@
   }
   &__anchor {
     display:inline-block;
-    margin: 1rem;
+    margin: 1rem 0.5rem;
   }
   &--visible {
     visibility:visible;
