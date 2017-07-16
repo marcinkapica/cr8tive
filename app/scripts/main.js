@@ -47,23 +47,31 @@ function hideMenu() {
 
 function searchToggling() {
     $(".js-toggleSearchButton").click(function(){
-        if (searchOn==false) {
-            searchBar.addClass("navbar__search-bar--open").focus().attr("tabIndex","0");
-            searchOn = true;
+        if (searchOn===false) {
+            showSearchBar();
         } else {
-            searchBar.removeClass("navbar__search-bar--open").blur().attr("tabIndex","-1");
-            searchOn = false;
+            hideSearchBar();
         }
         event.stopPropagation();
     });
+
     searchBar.on("click", function(){
         event.stopPropagation();
     });
 
     $(document).on("click", function() {
+        hideSearchBar()
+    });
+
+    function hideSearchBar(){
         searchBar.removeClass("navbar__search-bar--open").blur().attr("tabIndex", "-1");
         searchOn = false;
-    });
+    }
+
+    function showSearchBar(){
+        searchBar.addClass("navbar__search-bar--open").focus().attr("tabIndex","0");
+        searchOn = true;
+    }
 }
 
 function smoothScroll() {

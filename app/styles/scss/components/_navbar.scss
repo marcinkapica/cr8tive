@@ -35,19 +35,17 @@
 		@include media-min($tablet) {
 			padding: 0 0.4rem;
 		}
-		//&--search{
-		//	margin: 0 0.5rem;
-		//}
   }
 
   &__search-bar {
     width:0;
-		visibility: hidden; //hiding element because in IE is still visible despite width 0
-    transition: width 0.3s, visibility 0.3s, padding 0.3s;
+		opacity: 0;
+    transition: width 0.3s, opacity 0.5s, padding 0.3s;
     &--open {
+			opacity:1;
       padding:0 0.5rem;
       width:7rem;
-			visibility: visible;
+
       @media screen and (min-width:$mobile_l) {
         width:15rem;
       }
