@@ -1,28 +1,32 @@
+var searchBar = $(".js-searchBar");
+var searchOn = false;
+
 $(document).ready(function() {
     initCarousel();
     smoothScroll();
-    triggerSearch();
-    triggerMenu();
-    searchBar = $(".js-searchBar");
-    searchOn = false;
+    navbarBackground();
+    searchToggling();
+    menuToggling();
 });
 
-$(window).scroll(function() {
+function navbarBackground(){
     var navbar = $(".js-navbar");
-    var scroll = $(window).scrollTop();
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        if (scrollDistance > 0 ) {
+            navbar.addClass("navbar--scrolling");
+        } else {
+            navbar.removeClass("navbar--scrolling");
+        }
+    });
+}
 
-    if (scroll > 0 ) {
-        navbar.addClass("navbar--scrolling");
-    } else {
-        navbar.removeClass("navbar--scrolling");
-    }
-});
 
 function smoothScroll() {
     jQuery('a[href*="#"]:not([href="#"])').click(function () {
         $(".js-menu").removeClass("menu--visible");
-        $(".js-close-icon").removeClass("navbar__icon--visible");
-        $(".js-hamburger-icon").addClass("navbar__icon--visible");
+        $(".js-closeIcon").removeClass("navbar__icon--visible");
+        $(".js-hamburgerIcon").addClass("navbar__icon--visible");
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = jQuery(this.hash);
             target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
@@ -36,37 +40,33 @@ function smoothScroll() {
     });
 }
 
-function triggerMenu(){
-    var toggleNav = $(".js-toggleNav");
+function menuToggling(){
     var menu = $(".js-menu");
-    var hamburgerIcon = $(".js-hamburger-icon");
-    var closeIcon = $(".js-close-icon");
+    var hamburgerIcon = $(".js-hamburgerIcon");
+    var closeIcon = $(".js-closeIcon");
 
-    toggleNav.click(function(){
+    $(".js-menuToggleButton").click(toggleMenu);
+    $(document).click(hideMenu);
+    $(window).resize(hideMenu);
+
+    function toggleMenu(){
         searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1");
         searchOn = false;
         menu.toggleClass("menu--visible");
         hamburgerIcon.toggleClass("navbar__icon--visible");
         closeIcon.toggleClass("navbar__icon--visible");
         event.stopPropagation();
-    });
+    }
 
-    $(document).click(function(){
+    function hideMenu() {
         menu.removeClass("menu--visible");
         closeIcon.removeClass("navbar__icon--visible");
         hamburgerIcon.addClass("navbar__icon--visible");
-    });
-
-    $(window).resize(function(){
-        menu.removeClass("menu--visible");
-        closeIcon.removeClass("navbar__icon--visible");
-        hamburgerIcon.addClass("navbar__icon--visible");
-    });
+    }
 }
 
-function triggerSearch() {
-    var toggleSearch = $(".js-toggleSearch");
-    toggleSearch.on("click",function(){
+function searchToggling() {
+    $(".js-toggleSearchButton").click(function(){
         if (searchOn==false) {
             searchBar.addClass("navbar__search-bar--open").focus().attr("tabIndex","0");
             searchOn = true;
@@ -75,14 +75,10 @@ function triggerSearch() {
             searchOn = false;
         }
         event.stopPropagation();
-        searchBar.on("click",function(){
-            event.stopPropagation();
-        });
+        searchBar.click(event.stopPropagation());
     });
 
-    $(document).on("click", function(){
-        searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1");
-    });
+    $(document).click(searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1"));
 }
 
 function initCarousel() {
