@@ -1,12 +1,15 @@
 var searchBar = $(".js-searchBar");
 var searchOn = false;
+var menu = $(".js-menu");
+var hamburgerIcon = $(".js-hamburgerIcon");
+var closeIcon = $(".js-closeIcon");
 
-$(document).ready(function() {
+$(document).ready(function(){
+    navbarBackground();
+    menuToggling();
+    searchToggling();
     initCarousel();
     smoothScroll();
-    navbarBackground();
-    searchToggling();
-    menuToggling();
 });
 
 function navbarBackground(){
@@ -21,30 +24,7 @@ function navbarBackground(){
     });
 }
 
-
-function smoothScroll() {
-    jQuery('a[href*="#"]:not([href="#"])').click(function () {
-        $(".js-menu").removeClass("menu--visible");
-        $(".js-closeIcon").removeClass("navbar__icon--visible");
-        $(".js-hamburgerIcon").addClass("navbar__icon--visible");
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = jQuery(this.hash);
-            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                jQuery('html, body').animate({
-                    scrollTop: target.offset().top - $("#navbar").outerHeight(false)
-                }, 1000);
-                return false;
-            }
-        }
-    });
-}
-
 function menuToggling(){
-    var menu = $(".js-menu");
-    var hamburgerIcon = $(".js-hamburgerIcon");
-    var closeIcon = $(".js-closeIcon");
-
     $(".js-menuToggleButton").click(toggleMenu);
     $(document).click(hideMenu);
     $(window).resize(hideMenu);
@@ -57,12 +37,12 @@ function menuToggling(){
         closeIcon.toggleClass("navbar__icon--visible");
         event.stopPropagation();
     }
+}
 
-    function hideMenu() {
-        menu.removeClass("menu--visible");
-        closeIcon.removeClass("navbar__icon--visible");
-        hamburgerIcon.addClass("navbar__icon--visible");
-    }
+function hideMenu() {
+    menu.removeClass("menu--visible");
+    closeIcon.removeClass("navbar__icon--visible");
+    hamburgerIcon.addClass("navbar__icon--visible");
 }
 
 function searchToggling() {
@@ -75,10 +55,31 @@ function searchToggling() {
             searchOn = false;
         }
         event.stopPropagation();
-        searchBar.click(event.stopPropagation());
+    });
+    searchBar.on("click", function(){
+        event.stopPropagation();
     });
 
-    $(document).click(searchBar.blur().removeClass("navbar__search-bar--open").attr("tabIndex","-1"));
+    $(document).on("click", function() {
+        searchBar.removeClass("navbar__search-bar--open").blur().attr("tabIndex", "-1");
+        searchOn = false;
+    });
+}
+
+function smoothScroll() {
+    jQuery('a[href*="#"]:not([href="#"])').click(function () {
+        hideMenu();
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = jQuery(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                jQuery('html, body').animate({
+                    scrollTop: target.offset().top - $("#navbar").outerHeight(false)
+                }, 1000);
+                return false;
+            }
+        }
+    });
 }
 
 function initCarousel() {
