@@ -4,7 +4,7 @@
   width: 100%;
   padding: 0 5% 0;
   z-index: 999;
-  @media screen and (min-width:$desktop) {
+	@include media-min($desktop) {
     padding:0 17.5%;
     transition: all 0.5s;
   }
@@ -46,14 +46,14 @@
       padding:0 0.5rem;
       width:7rem;
 
-      @media screen and (min-width:$mobile_l) {
+			@include media-min($mobile_l) {
         width:15rem;
       }
     }
   }
 	&__button {
 		&--toggle {
-			@media screen and (min-width:$notebook) {
+			@include media-min($notebook) {
 				display:none;
 			}
 		}
@@ -77,7 +77,7 @@
   overflow-y:scroll;
   padding:7rem 0 10%;
   margin-top:0;
-  @media screen and (min-width:$notebook) {
+	@include media-min($notebook) {
     display: inline-block;
     position: relative;
     visibility: visible;
@@ -90,7 +90,7 @@
   }
   &__item {
     display: block;
-    @media screen and (min-width:$notebook) {
+		@include media-min($notebook) {
       display:inline-block;
     }
   }

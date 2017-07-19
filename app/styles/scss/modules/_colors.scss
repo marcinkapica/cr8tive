@@ -70,8 +70,8 @@ $inputBackground: #2e2e2e;
 .menu {
   background-color: #000;
   opacity: 0;
-  @media screen and (min-width:$notebook) {
-	background-color:transparent;
+	@include media-min($notebook) {
+		background-color:transparent;
   }
   &--visible {
     opacity: 0.95;

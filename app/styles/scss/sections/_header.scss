@@ -3,10 +3,10 @@
 	@extend %clearfix;
 	background-image: url("../images/background-header.jpg");
 	padding: $headerPadTop $padSideSmall 3rem;
-	@media screen and (min-width:$desktop) {
+	@include media-min($desktop) {
 		padding: $headerPadTop 10% 0;
 	}
-	@media screen and (min-width:$fhd) {
+	@include media-min($fhd) {
 		padding: $headerPadTop 15rem 0;
 	}
 	&__image {
@@ -24,7 +24,7 @@
 			transform: scale(1.2) rotate(10deg) translateX(-50%);
 			left:50%;
 		}
-		@media screen and (min-width:$notebook) {
+		@include media-min($notebook) {
 			display:block;
 		}
 	}

@@ -3,7 +3,6 @@
 .tmp
 dist/
 /node_modules
-.babelrc
 !/app/styles/vendor/
 .idea/
 
