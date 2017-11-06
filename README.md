@@ -2,6 +2,8 @@
 
 Webpage based on free PSD layout from [http://www.psdfreebie.com](http://www.psdfreebie.com) - coded as an exercise
 
+[DEMO](https://marcinkapica.github.io/cr8tive-website/)
+
 ## Installation and launching
 
 ### 1. Installing npm packages
