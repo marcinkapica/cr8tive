@@ -27,7 +27,9 @@ This will cause deletion of all contents of the `dist` folder and will generate 
 ## Used tools, libraries and frameworks
 - [gulp](https://gulpjs.com/)
 - [Normalize.css](https://necolas.github.io/normalize.css/)
-- [Bootstrap](https://getbootstrap.com/docs/3.3/)
+- [Font Open Sans via Google Fonts](https://fonts.google.com/specimen/Open+Sans)
 - [Font Awesome](http://fontawesome.io/)
+- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
+- [Google Maps API](https://developers.google.com/maps/)
 - [SCSS](http://sass-lang.com/)
 - [jQuery](https://jquery.com/)
